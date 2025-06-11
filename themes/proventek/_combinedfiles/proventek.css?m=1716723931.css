@@ -1,0 +1,1115 @@
+/****** FILE: themes/proventek/css/form.css *****/
+/*************************
+ http://arillo.net
+ FORM.CSS
+**************************/
+
+/*************************
+ FORMS
+ **************************/
+input,
+button,
+select,
+textarea {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  margin: 0;
+  vertical-align: middle;
+}
+::-moz-focus-inner {
+  border: 0;
+}
+form{
+	margin: 0 0 18px;
+}
+	form fieldset{
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	/*-- REMOVE IF YOUR INPUTS ARE NOT WITDH 100% --*/
+	.lt8 form fieldset{
+		overflow: hidden;
+		width: 100%;
+	}
+		p.bad{
+			color: #c12c2c;
+		}
+		p.checkbox label,
+		p.checkbox input,
+		div.checkboxset label,
+		div.checkboxset input,
+		div.optionset label,
+		div.optionset input,
+		.Actions input,
+		button,
+		select{ 
+			cursor: pointer;
+		} 
+		.field{
+			margin-bottom: 8px;
+		}
+			label.required{
+				display: block;
+				color: #c12c2c;
+				font-style: italic;
+			}
+			
+			/*-- TEXT INPUTS --*/
+			textarea,
+			select,
+			input.date,
+			input.datetime,
+			input.email,
+			input.password,
+			input.text{
+				/*-- reset --*/
+				-webkit-appearance: none;
+				-moz-border-radius: 0;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				/*-- colors --*/
+				background-color: #fff;
+				border: 1px solid;
+				border-color: #848484 #c1c1c1 #e1e1e1;
+				outline: 0;
+				/*-- type --*/
+				color: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				line-height: inherit;
+				/*-- format --*/
+				padding: 2px 3px;
+				height: 25px;
+				/*-- DEFAULT width 100% change if needed --*/
+				width: 100%;
+			}
+			/* readjust height to match select in ie */
+			.lt8 textarea,
+			.lt8 select,
+			.lt8 input.date,
+			.lt8 input.datetime,
+			.lt8 input.email,
+			.lt8 input.password,
+			.lt8 input.text{
+				padding-top: 2px;
+				padding-bottom: 1px;
+				height: auto;
+			}
+			/*MAKE TEXTINPUTS WITH WIDTH 100% FIT IN IE (Textarea bellow)*/
+			.lt8 div.date .middleColumn,
+			.lt8 div.datetime .middleColumn,
+			.lt8 div.email .middleColumn,
+			.lt8 div.password .middleColumn,
+			.lt8 div.text .middleColumn{
+				padding-right: 8px;
+			}
+			
+			/*-- SELECTS --*/
+			select{
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+			}
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				select{
+					background-image: url(../images/forms/select_arrow.gif);
+					background-repeat: no-repeat;
+					background-position: right center;
+					padding-right: 20px;
+				}
+			}
+			select[multiple] {
+				height: auto;
+				background-image: none;
+			}
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				select[multiple] {
+					padding: 0;
+				}
+			}
+				optgroup {
+					color: #666;
+					font-style: normal;
+					font-weight: bold;
+				}
+			
+			/*-- TEXTAREA --*/
+			textarea {
+				vertical-align: top;
+				height: auto;
+				min-height: 100px;
+				overflow: auto;
+				resize: vertical;
+				width: 100%;
+			}
+			/*MAKE TEXTAREA WITH WIDTH 100% FIT IN IE*/
+			.lt8 div.textarea .middleColumn{
+				padding-right: 8px;
+			}
+			/*-- CHECKBOXES & RADIOBUTTONS --*/
+			div.checkboxset ul,
+			div.optionset ul{
+				margin-bottom: 0;	
+			}
+				p.checkbox input,
+				div.checkboxset input,
+				div.optionset input{
+					margin-left: 0;
+					margin-right: 3px;	
+				}
+				p.checkbox input,
+				div.checkboxset input{
+					line-height: inherit;
+					vertical-align: baseline;	
+				}
+			/*-- DISABLED STUFF --*/
+			textarea[disabled],
+			select[disabled],
+			input.date[disabled],
+			input.datetime[disabled],
+			input.email[disabled],
+			input.password[disabled],
+			input.text[disabled]{
+				background-color: #eee;
+				color: #888;
+				cursor: default;
+			}
+			/*-- FOCUS STYLE --*/
+			textarea:focus,
+			textarea:active,
+			select:focus,
+			select:active,
+			input.date:focus,
+			input.date:active,
+			input.datetime:focus,
+			input.datetime:active,
+			input.email:focus,
+			input.email:active,
+			input.password:focus,
+			input.password:active,
+			input.text:focus,
+			input.text:active{
+				-moz-box-shadow: #999 0 0 5px;
+				-webkit-box-shadow: #999 0 0 5px;
+				box-shadow: #999 0 0 5px;
+				z-index: 1;			
+			}
+		/*-- BUTTONS --*/
+	.Actions{
+		padding-top: 8px;
+	}
+		input[type="button"],
+		input[type="submit"],
+		.Actions input,
+		button{
+			-webkit-appearance: none;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			background: #ddd url(../images/forms/button.png) repeat-x;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+			background-image: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+			text-shadow: rgba(255,255,255,0.75) 0 1px 1px;
+			border: 1px solid;
+			border-color: #ddd #bbb #999;
+			cursor: pointer;
+			color: inherit;
+			font-family: inherit;
+			font-weight: normal;
+			font-size: inherit;
+			line-height: 1.2;
+			height: 25px;
+			outline: 0;
+			overflow: visible;
+			padding: 3px 10px 4px;
+			width: auto;
+		}
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		.Actions input:hover,
+		button:hover{
+			border-color: #ccc #aaa #888;
+			background: #999 url(../images/forms/button.png) repeat-x;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ddd), color-stop(1, #aaa));
+			background-image: -moz-linear-gradient(top center, #ddd 0%, #aaa 100%);			
+			text-shadow: rgba(255,255,255,0.5) 0 1px 1px;
+		}
+		.ie7 input[type="button"]:hover,
+		.ie7 input[type="submit"]:hover,
+		.ie7 .Actions input{
+			padding: 1px 10px 0px;
+			height: 21px;
+		}
+		.ie7 button{
+			padding-top: 1px;
+			padding-bottom: 1px;
+			height: 21px;
+		}
+		/*-- DISABLED STUFF --*/
+		input[type="button"][disabled],
+		input[type="submit"][disabled],
+		button[disabled],
+		.Actions input[disabled]{
+			color: #888;
+			background: #ddd url(../images/forms/button.png) repeat-x;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+			background-image: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+			border-color: #ddd #bbb #999;
+			text-shadow: rgba(255,255,255,0.75) 0 1px 1px;
+			cursor: default;
+		}
+		/*-- FOCUS STYLE --*/
+		input[type="button"]:focus,
+		input[type="button"]:active,
+		input[type="submit"]:focus,
+		input[type="submit"]:active,
+		.Actions button:focus,
+		.Actions button:active,
+		.Actions input:focus,
+		.Actions input:active{
+			-moz-box-shadow: #999 0 0 5px;
+			-webkit-box-shadow: #999 0 0 5px;
+			box-shadow: #999 0 0 5px;
+			z-index: 1;
+		}
+
+/****** FILE: themes/proventek/css/typography.css *****/
+/*************************
+ http://arillo.net
+ TYPOGRAPHY.CSS
+**************************/
+/*************************
+ GENERAL
+ **************************/
+.typography * {
+/*	color: #222;
+	font: 12px/18px Arial, sans-serif;*/
+}
+/*************************
+ vertical rythm
+ **************************/
+.typography address,
+.typography blockquote,
+.typography table,
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6,
+.typography ul,
+.typography ol,
+.typography dl,
+.typography p,
+.typography form{
+	margin-bottom: 18px;
+}
+/*************************
+ LINKS
+ **************************/
+.typography a{	
+	color: #999;
+	text-decoration: none;	
+}
+.typography a:hover{	
+	text-decoration: underline;	
+}
+.typography a:focus {
+	outline: none;
+}
+/*************************
+ STROG & italic
+ **************************/
+.typography b,
+.typography strong{
+	font-weight: bold;
+}
+.typography i,
+.typography em{
+	font-style: italic;
+}
+/*************************
+ QUOTES
+ **************************/
+.typography blockquote{
+	font-size: 14px;
+	color: #999;
+	clear: both;
+	text-align: left;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 14px;
+	padding-left: 30px;
+}
+	.typography blockquote p{
+		font-family: Georgia, serif;
+		font-style: italic;
+		font-size: 14px;
+	}	
+.typography q{
+	color: #999;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+/*************************
+ LIST STYLES
+ **************************/
+.typography ol,
+.typography dl,
+.typography ul{
+	list-style-position: outside;
+	padding-left: 18px;
+}
+.typography ul{
+	list-style: outside disc;
+}
+.typography ol{
+	list-style: outside decimal;	
+}
+	.typography dl dt{
+		display: block;
+		font-weight: bold;
+	}
+	.typography dl dd{
+		padding-left: 18px;
+	}
+	.typography ul ol,
+	.typography ul dl,
+	.typography ol ul,
+	.typography ol dl,
+	.typography dl ul,
+	.typography dl ol{
+		margin-bottom: 0;
+	}
+/*************************
+ ADDRESS
+ **************************/
+.typography address{
+	font-style: italic;
+}
+/*************************
+ HEADER STYLES 
+ **************************/
+.typography h1,
+.typography h2,
+.typography h3,
+.typography h4,
+.typography h5,
+.typography h6{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin:0 0 18px;
+}
+.typography h1,
+.typography h2{
+	font-size: 26px;
+}
+.typography h3,
+.typography h4{
+	font-size: 22px;
+}
+.typography h6,
+.typography h5{
+	font-size: 16px;
+}
+/*************************
+ PRE STYLES
+ **************************/
+.typography pre,
+.typography code{
+	font-family: Consolas, Monaco, monospace;
+}
+.typography pre{
+	overflow: auto;
+ 	margin-bottom: 18px;
+	padding: 12px; 
+	line-height: inherit;
+	border:1px #dfdfdf solid;
+	background:#f9f9f9;
+	white-space: pre; /* CSS2 */
+	word-wrap: break-word; /* IE */
+	text-align: left;
+}
+/*************************
+ WYSIWYG EDITOR ALIGNMENT CLASSES 
+ **************************/
+.typography .left {
+	float: left;
+	padding-right: 18px;
+}
+.typography .leftAlone {
+	clear: both;	
+}
+.typography .center {
+	margin: 0 auto;
+	clear: both;
+}
+.typography .right {
+	float: right;
+	padding-left: 18px;
+}
+/*************************
+ IMAGES
+ **************************/
+.typography .captionImage{
+	max-width: 100% !important;
+}
+	.typography .caption{
+		font-family: serif;
+		color: #999;
+	}
+.typography img {
+	border: none;
+	max-width: 100% !important;
+}
+	.typography img.leftAlone,
+	.typography img.center,
+	.typography img.left,
+	.typography img.right {
+		margin-bottom: 18px;
+	}
+/*************************
+ TABLE STYLING
+ **************************/
+.typography table {
+	border-top: 1px solid #ddd !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	height: auto !important;
+	float: none !important; 
+}
+	.typography caption,
+	.typography th {
+		font-weight: bold;
+		text-align: left;
+		padding: 5px;
+		border-bottom: 1px solid #ddd;
+	}
+	.typography td {
+		border-bottom: 1px solid #ddd;
+		padding: 5px;
+	}
+	.typography th:first-child,
+	.typography td:first-child {
+		padding-left: 0;
+	}
+	.typography th:last-child,
+	.typography td:last-child {
+		padding-right: 0;
+	}
+/*************************
+ SUB - SUP
+ **************************/
+.typography sub,
+.typography sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+.typography sup {
+    top: -0.5em;
+}
+.typography sub {
+    bottom: -0.25em;
+}
+/*************************
+ OTHERS
+ **************************/
+.typography mark {
+	background-color:#ff9;
+	color:#222;
+	font-style:italic;
+	font-weight:bold;
+}
+.typography ins {
+	background-color:#ff9;
+	color:#222;
+	text-decoration:none;
+}
+.typography abbr[title], 
+.typography dfn[title] { 
+	border-bottom:1px dotted #000;
+	cursor:help;
+}
+
+
+/****** FILE: themes/proventek/css/lightbox.css *****/
+/* line 7, ../sass/lightbox.sass */
+body:after {
+  content: url(../images/lightbox/close.png) url(../images/lightbox/loading.gif) url(../images/lightbox/prev.png) url(../images/lightbox/next.png);
+  display: none;
+}
+
+/* line 11, ../sass/lightbox.sass */
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+/* line 20, ../sass/lightbox.sass */
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+/* line 28, ../sass/lightbox.sass */
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 32, ../sass/lightbox.sass */
+.lightbox a img {
+  border: none;
+}
+
+/* line 35, ../sass/lightbox.sass */
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 44, ../sass/lightbox.sass */
+.lb-container {
+  padding: 4px;
+}
+
+/* line 47, ../sass/lightbox.sass */
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 56, ../sass/lightbox.sass */
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/lightbox/loading.gif) no-repeat;
+}
+
+/* line 63, ../sass/lightbox.sass */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 71, ../sass/lightbox.sass */
+.lb-container > .nav {
+  left: 0;
+}
+
+/* line 74, ../sass/lightbox.sass */
+.lb-nav a {
+  outline: none;
+}
+
+/* line 77, ../sass/lightbox.sass */
+.lb-prev, .lb-next {
+  width: 49%;
+  height: 100%;
+  cursor: pointer;
+  /* Trick IE into showing hover */
+  display: block;
+}
+
+/* line 84, ../sass/lightbox.sass */
+.lb-prev {
+  left: 0;
+  float: left;
+}
+/* line 87, ../sass/lightbox.sass */
+.lb-prev:hover {
+  background: url(../images/lightbox/prev.png) left 48% no-repeat;
+}
+
+/* line 90, ../sass/lightbox.sass */
+.lb-next {
+  right: 0;
+  float: right;
+}
+/* line 93, ../sass/lightbox.sass */
+.lb-next:hover {
+  background: url(../images/lightbox/next.png) right 48% no-repeat;
+}
+
+/* line 96, ../sass/lightbox.sass */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 103, ../sass/lightbox.sass */
+.lb-data {
+  padding: 0 4px;
+  color: #bbbbbb;
+}
+/* line 106, ../sass/lightbox.sass */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+/* line 111, ../sass/lightbox.sass */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 115, ../sass/lightbox.sass */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+/* line 121, ../sass/lightbox.sass */
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/lightbox/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 130, ../sass/lightbox.sass */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+/****** FILE: themes/proventek/css/layout.css *****/
+/*************************
+ http://arillo.net
+ LAYOUT.CSS
+ 
+ Project: 
+ Author:
+  
+**************************/
+
+/*************************
+ DEFAULTS - NORMALIZE
+ **************************/
+html{
+    height: 100%;
+    font-size: 100%;
+    overflow-y: scroll; 
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body{
+    background-color: #000;
+    color: #222;
+    font: 12px/18px Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+a{  
+    color: #999;
+    text-decoration: none;  
+}
+a:hover{    
+    text-decoration: underline; 
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover,
+a:active {
+    outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    margin:0 0 18px;
+}
+h1,
+h2{
+    font-size: 26px;
+}
+h3,
+h4{
+    font-size: 22px;
+}
+h6,
+h5{
+    font-size: 16px;
+}
+ul,ol,dl{
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+}
+dl,ul,ol,p,table{
+    margin:0 0 18px;
+    
+}
+small{
+    font-size:85%;
+}
+em,
+i{
+    font-style: italic;
+}
+strong,
+b,
+th{
+    text-align: left;
+    font-weight: bold;
+}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: bottom;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* HR - horizontal rule */ 
+hr {
+    display:block;
+    height:1px; 
+    border:0;
+    border-top:1px solid #ccc;
+    margin: 18px 0;
+    padding:0;
+    clear: both;
+}
+embed,
+object,
+iframe{
+    border: 0;
+    vertical-align: bottom;
+}
+::-moz-selection{
+    background: #00ccff;
+    color:#222;
+    text-shadow: none;
+}
+::selection {
+    background:#00ccff;
+    color:#222;
+    text-shadow: none;
+}
+a:link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/*************************
+ HELPER CLASSES
+ **************************/
+.ir{ /* image replacement */
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    display: block;
+    background: url(/themes/proventek/images/general/sprite.png) no-repeat 0 0;
+}
+.cl:before,
+.cl:after,
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.cl:after,
+.clearfix:after {
+    clear:both;
+}
+.cl,
+.clearfix{
+    zoom:1;
+}
+.clear{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*************************
+ FONT
+ **************************/
+@font-face {
+    font-family: 'Conv_uni05_53';
+    src: url('../fonts/uni05_53.eot');
+    src: local('☺'), url('../fonts/uni05_53.woff') format('woff'), url('../fonts/uni05_53.ttf') format('truetype'), url('../fonts/uni05_53.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*************************
+ WRAP
+ **************************/
+#Wrap {
+    position: relative;
+    height: auto;
+    top: 50%;
+    margin-top: -336px;
+    height: 673px;
+    width: 934px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+}
+
+/*************************
+ HEADER
+ **************************/
+#Header{
+    position: absolute;
+    right: 150px;
+    top: 28px;
+    font-size: 30px;
+    font-family: Conv_uni05_53,Sans-Serif;
+    text-align: center;
+}
+    #Menu li{
+        margin: 20px;
+    }
+        #Menu li a{
+            color: #999;
+        }
+        #Menu li a:hover,
+        #Menu li a.current,
+        #Menu li a.section{
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+/*************************
+ PAGE
+ **************************/
+.page{
+}
+    .content{
+        position: absolute;
+        width: 226px;
+        height: 205px;
+        top: 30px;
+        left: 155px;
+        overflow: auto;
+    }
+
+    .page .content .typography{
+        font-family: monospace;
+        font-size: 14px;
+        color: #fff;
+        padding-right: 10px;
+        text-align: justify;
+    }
+
+    .home .content .typography, .videos .content .typography {
+        margin-top: 10px;
+        padding-right: 0;
+    }
+/*************************
+ EXTERNAL LINKS
+ **************************/
+#ExternalLinks{
+    position: absolute;
+    right: 5px;
+    bottom: 18px;
+    z-index: 9999;
+}
+    #ExternalLinks a{
+        display: block;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        background-repeat: no-repeat;
+        background-size: 98%;
+        margin: 10px;
+    }
+
+    #ExternalLinks .instagram{
+        background-image: url(../images/general/instagram.png);
+    }
+    #ExternalLinks .youtube{
+        background-image: url(../images/general/youtube.png);
+    }
+    #ExternalLinks .facebook{
+        background-image: url(../images/general/facebook.png);
+    }
+    #ExternalLinks .soundcloud{
+        background-image: url(../images/general/soundcloud.png);
+    }
+
+/*************************
+ FOOTER
+ **************************/
+#Footer .logo{
+    position: absolute;
+    /*top: 610px;
+    left: 20px;*/
+    bottom: 12px;
+    text-indent: -9999px;
+    width: 295px;
+    height: 56px;
+    background-image: url(../images/general/logo2.png);
+    background-repeat: no-repeat;
+}
+
+#Footer .copyright{
+    position: absolute;
+    top: 655px;
+    right: 30px;
+    font-size: 9px;
+    color: #fff;
+}
+
+#Footer .like_btn{
+    position: absolute;
+    width: 93px;
+    height: 23px;
+    top: 648px;
+    left: 630px;
+    overflow: hidden;
+}
+
+/*************************
+ SWITCH
+ **************************/
+ #Switch{
+    position: absolute;
+    width: 50px;
+    height: 71px;
+    top: 60px;
+    left: 35px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    cursor: pointer;
+    z-index: 9999;
+ }
+
+    #Switch.off{
+        background-image: url(../images/general/switch-off.png);;
+    }
+
+    #Switch.on{
+        background-image: url(../images/general/switch-on.png);;
+    }
+
+    .home .switcheable{
+        display: none;
+    }
+/*************************
+ SCROLLBAR
+ **************************/
+::-webkit-scrollbar {
+    height: 12px;
+    width: 10px;
+    background: rgba(0,0,0,0.5);
+    opacity: 0.1;
+    }
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+/* Gallery Custom Styles */
+.lightbox .lb-number {
+    display: none !important;
+}
+
+/* Share Menu Custom Styles */
+.addthis_toolbox {
+    position: absolute;
+    right: 22px;
+    bottom: 195px;
+    background: none;
+    outline: 0;
+    width: 32px !important;
+}
+
+#at15s{
+    display: none !important;
+}
+
+
